@@ -150,7 +150,7 @@ background-color:#5D0580;
                 <li><a href="Index.php?PageName=About" >About Us </a></li>
                 <li><a href="Index.php?PageName=Contact">Contact Us</a></li>
 		<li><a href="Index.php?PageName=ShareWithFriend">Tell a friend</a></li>
-                <li><a href="Index.php?PageName=Home">Coming Soon</a></li>
+                <li><a href="">Coming Soon</a></li>
 		<li><a href="">Forum</a></li>
             </ul>
             <div class="clear"></div>
@@ -158,11 +158,29 @@ background-color:#5D0580;
         </div>
         <!-- Main Area Content Area -->
         <div id="main">
-                       <div id="content">
+    <div id="content">
+    <?php 
+    
+    if(!empty($_GET['PageName']))
+    {
+        $PagesDirectory='PagesFolder';
+        $PagesFolder=scandir($PagesDirectory,0);
+        unset($PagesFolder[0], $PagesFolder[1]);
+        $PageName=$_GET['PageName'];
+        if(in_array($PageName.'.inc.php',$PagesFolder)){
+            include($PagesDirectory.'/'.$PageName.'.inc.php');
+        } else {
+            echo '<h1 id="request">You are Lost..</h1><br>';
+            echo '<img src="Images/Lost.gif" width="680 height="430">';
+            echo '<h2>Sorry Page Not Found</h2>';
+        }
 
+    }
+    
+    ?>
 	  <div class="clear"></div>	  	 
 
-	    </div>
+	</div>
 	    
          <!-- Side Area -->
             <div id="side">

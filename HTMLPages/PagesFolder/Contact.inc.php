@@ -53,20 +53,20 @@ font-family: Bitter,Georgia,Times,"Times New Roman",serif;}
  <span class="FieldInfo">
 Name:</span><br>
 <input class="input" type="text" Name="Name" value="">
-<span class="Error">*<?php echo $NameError;  ?></span><br>
+<span class="Error"></span><br>
 <span class="FieldInfo">
 E-mail:</span><br>
 <input class="input" type="text" Name="Email" value="">
-<span class="Error">*<?php echo $EmailError; ?></span><br>
+<span class="Error"></span><br>
 <span class="FieldInfo">
 Gender:</span><br>
 <input class="radio" type="radio" Name="Gender" value="Female"><span class="MF">Female</span>
 <input class="radio" type="radio" Name="Gender" value="Male"><span class="MF">Male</span>
-<span class="Error">*<?php echo $GenderError; ?></span><br>
+<span class="Error"></span><br>
 <span class="FieldInfo">
 Website:</span><br>
 <input class="input" type="text" Name="Website" value="">
-<span class="Error">*<?php echo $WebsiteError; ?></span><br>
+<span class="Error"></span><br>
 <span class="FieldInfo">
 Comment:</span><br>
 <textarea Name="Comment" rows="5" cols="25"></textarea>
